@@ -1,7 +1,7 @@
 const translations = {
   en: {
-    "translate-button": "Pt-🇧🇷", //Removido, agora é dinâmico
-    "lang-code": "Pt-🇧🇷", // Nova chave para o código da linguagem
+    "translate-button": "PT - BR", //Removido, agora é dinâmico
+    "lang-code": "PT - BR", // Nova chave para o código da linguagem
     "logo-text": "Raphael's<span> Portfolio</span>",
     "nav-home": "Home",
     "nav-about": "About",
@@ -44,8 +44,8 @@ const translations = {
     "email-copied-text": "Email Copied!",
   },
   pt: {
-    "translate-button": "🇺🇸 en-us", //Removido, agora é dinâmico
-    "lang-code": "En-🇺🇸", // Nova chave para o código da linguagem
+    "translate-button": "EN - US",
+    "lang-code": "EN - US",
     "logo-text": "Raphael's<span> Portfólio</span>",
     "nav-home": "Tela Inicial",
     "nav-about": "Sobre",
@@ -154,14 +154,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let originalTextHeight = aboutText.scrollHeight;
 
     // Set initial height to 30%
-    aboutText.style.maxHeight = `${originalTextHeight * 0.3}px`;
+    aboutText.style.maxHeight = `${originalTextHeight * 0.5}px`;
     aboutText.style.overflow = "hidden";
 
     readMoreBtn.addEventListener("click", function (event) {
       event.preventDefault();
 
       if (isExpanded) {
-        aboutText.style.maxHeight = `${originalTextHeight * 0.3}px`; // Set back to 30%
+        aboutText.style.maxHeight = `${originalTextHeight * 0.5}px`; // Set back to 30%
         readMoreBtn.textContent =
           translations[document.documentElement.lang]["read-more-btn"];
       } else {

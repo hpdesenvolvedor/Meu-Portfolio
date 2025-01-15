@@ -241,7 +241,15 @@ section {
     0 0 100px var(--main-color);
 }
 .about-text {
-  transition: max-height 0.5s ease-in-out;
+  /* Contêiner do texto "Sobre" */
+  /* REMOVA height: 200px; (ou qualquer altura fixa) */
+  max-height: 100px; /* Altura inicial (ajuste conforme necessário) */
+  overflow: hidden; /* Oculta o texto que ultrapassa a altura */
+  transition: max-height 0.3s ease-in-out; /* Transição suave */
+}
+
+.about-text.expanded {
+  max-height: none;
 }
 .about-content h2 {
   font-size: 7rem;
