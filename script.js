@@ -2,7 +2,7 @@
 
 const translations = {
   en: {
-      "translate-button": "Translate",
+      "translate-button": "Traduzir(pt-br)",
       "logo-text": "Raphael's<span> Portfolio</span>",
       "nav-home": "Home",
       "nav-about": "About",
@@ -29,7 +29,7 @@ const translations = {
       "footer-services": "Services",
       "footer-about-me": "About Me",
       "footer-contact": "Contact",
-      "footer-copyright": "© Raphael Moreira | All Rights Reserved", // Tradução em inglês
+      "footer-copyright": "© Raphael Moreira | All Rights Reserved", 
       "contact-heading": "Contact <span>Me</span>",
       "send-message-btn": "Send Message",
       "full-name": "Full Name",
@@ -37,9 +37,10 @@ const translations = {
       "phone-number": "Phone Number",
       "subject": "Subject",
       "message": "Your Message",
+      "email-copied-text": "Email Copied!",
     },
   pt: {
-      "translate-button": "Traduzir",
+      "translate-button": "Translate(en-us)",
       "logo-text": "Raphael's<span> Portfólio</span>",
       "nav-home": "Tela Inicial",
       "nav-about": "Sobre",
@@ -52,7 +53,7 @@ const translations = {
       "hire": "Contratar",
       "contact": "Contato",
       "about-title": "Sobre <span>Mim</span>",
-      "about-description": "Profissional com três anos de experiência em desenvolvimento de software em uma multinacional com atuação diversificada nos setores de Óleo e Gás e Satélites/Internet, onde trabalhei em projetos desafiadores com foco em design UI/UX. No setor de Satélites/Internet, participei do desenvolvimento de soluções inovadoras para tracking e monitoramento de sinais Wi-Fi em ônibus e vans de viagem, otimizando a conectividade e a experiência do usuário durante o transporte. Minhas responsabilidades incluíam o desenvolvimento de aplicações web, a criação de interfaces escaláveis e responsivas, utilizando tecnologias como GitLab para controle de versão, TypeScript para tipagem estática, React e Next.js para o frontend, Node.js e Prisma para o backend, Figma para design de interfaces, TailwindCSS para estilização e Django para desenvolvimento web. Um dos meus principais projetos foi a implementação e atualização do Marketplace da empresa para um novo padrão de design, o que envolveu a refatoração de componentes existentes, a otimização do código para melhor performance e a criação e edição de plugins para adicionar novas funcionalidades e manter o site em constante evolução. Possuo habilidades sólidas em desenvolvimento de aplicações web escaláveis, APIs REST, metodologias ágeis (Scrum) e design UI/UX. Além disso, tenho experiência em utilizar a língua inglesa no dia a dia do trabalho com equipes globais, o que me permitiu colaborar efetivamente em projetos internacionais.",
+      "about-description": "Profissional com três anos de experiência em desenvolvimento de software em uma multinacional com atuação diversificada nos setores de Óleo e Gás e Satélites/Internet, onde trabalhei em projetos desafiadores com foco em design UI/UX. No setor de Satélites/Internet, participei do desenvolvimento de soluções inovadoras para tracking e monitoramento de sinais Wi-Fi em ônibus e vans de viagem, otimizando a conectividade e a experiência do usuário durante o transporte. Minhas responsabilidades incluíam o desenvolvimento de aplicações web, a criação de interfaces escaláveis e responsivas, utilizando tecnologias como GitLab para controle de versão, TypeScript para tipagem estática, React e Next.js para o frontend, Node.js e Prisma para o backend, Figma para design de interfaces, TailwindCSS para estilização e Django para desenvolvimento web. Um dos meus principais projetos foi a implementação e atualização do Marketplace da empresa para um novo padrão de design, o que envolveu a refatoração de componentes existentes, a otimização do código para melhor performance e a criação e edição de plugins para adicionar novas funcionalidades e manter o site em constante evolução. Possuo habilidades sólidas em desenvolvimento de aplicações web escaláveis, APIs REST, metodologias ágeis (Scrum) e design UI/UX.",
       "read-less-btn": "Leia Menos",
       "read-more-btn": "Leia Mais",
       "services-title": "Serviços",
@@ -66,7 +67,7 @@ const translations = {
       "footer-services": "Serviços",
       "footer-about-me": "Sobre Mim",
       "footer-contact": "Contato",
-      "footer-copyright": "© Raphael Moreira | Todos os Direitos Reservados", // Tradução em português
+      "footer-copyright": "© Raphael Moreira | Todos os Direitos Reservados",
       "contact-heading": "Contate <span>Me</span>",
       "send-message-btn": "Enviar Mensagem",
       "full-name": "Nome Completo",
@@ -74,6 +75,7 @@ const translations = {
       "phone-number": "Número de Telefone",
       "subject": "Assunto",
       "message": "Sua Mensagem",
+      "email-copied-text": "Email Copiado!"
     },
 };
 
@@ -85,14 +87,17 @@ document.getElementById("translate-btn").addEventListener("click", () => {
   elements.forEach((element) => {
     const key = element.getAttribute("data-translate-key");
     if (translations[newLang] && translations[newLang][key]) {
-      if (element.placeholder !== undefined) { // Check if it's an element with placeholder
+      if (element.placeholder !== undefined) { 
         element.placeholder = translations[newLang][key];
       }
        else if (element.tagName === 'INPUT' && element.type === 'submit') {
       element.value = translations[newLang][key];
   }
-       else {
-        element.innerHTML = translations[newLang][key];
+        else if (element.id === 'email-copied-tooltip') {
+          element.textContent = translations[newLang][key];
+  }
+            else {
+              element.innerHTML = translations[newLang][key];
       }
     }
   });
@@ -109,24 +114,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const aboutText = document.getElementById("about-text");
 
   if (readMoreBtn && aboutText) {
-      let isExpanded = false; // Variável para controlar o estado (expandido ou recolhido)
-      let originalTextHeight = aboutText.scrollHeight;
-      aboutText.style.maxHeight = "100px";
-      aboutText.style.overflow = "hidden";
-      readMoreBtn.addEventListener("click", function(event) {
-          event.preventDefault(); // Evita o comportamento padrão do link
+    let isExpanded = false;
+    let originalTextHeight = aboutText.scrollHeight;
 
-          if (isExpanded) {
-              aboutText.style.maxHeight = "100px";
-              readMoreBtn.textContent = translations[document.documentElement.lang]["read-more-btn"];
+    // Set initial height to 30%
+    aboutText.style.maxHeight = `${originalTextHeight * 0.3}px`;
+    aboutText.style.overflow = "hidden";
 
-          } else {
-              aboutText.style.maxHeight = originalTextHeight + "px";
-              readMoreBtn.textContent = translations[document.documentElement.lang]["read-less-btn"];
-          }
+    readMoreBtn.addEventListener("click", function(event) {
+      event.preventDefault();
 
-          isExpanded = !isExpanded;
-      });
+      if (isExpanded) {
+        aboutText.style.maxHeight = `${originalTextHeight * 0.3}px`; // Set back to 30%
+        readMoreBtn.textContent = translations[document.documentElement.lang]["read-more-btn"];
+      } else {
+        aboutText.style.maxHeight = originalTextHeight + "px"; // Show full height
+        readMoreBtn.textContent = translations[document.documentElement.lang]["read-less-btn"];
+      }
+
+      isExpanded = !isExpanded;
+    });
   }
 });
 
@@ -142,4 +149,28 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
       console.error("Elementos menu-icon ou navbar não encontrados!");
   }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const copyEmailButtons = document.querySelectorAll('.copy-email-btn');
+  const emailCopiedTooltips = document.querySelectorAll('.email-copied-tooltip');
+  const emailToCopy = "raphael.moreira@soulasalle.com.br";
+
+  copyEmailButtons.forEach((button, index) => {
+      button.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          navigator.clipboard.writeText(emailToCopy)
+              .then(() => {
+                  emailCopiedTooltips[index].classList.add('show'); // Tooltip correto
+                  setTimeout(() => {
+                      emailCopiedTooltips[index].classList.remove('show');
+                  }, 3000);
+              })
+              .catch(err => {
+                  console.error('Falha ao copiar: ', err);
+                  alert("A cópia para a área de transferência não é suportada.");
+              });
+      });
+  });
 });
