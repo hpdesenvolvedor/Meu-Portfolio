@@ -431,10 +431,13 @@ section {
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
-
-    display: flex; /* Habilita o flexbox */
-    flex-direction: column; /* Define o layout vertical */
+    display: none; /* Inicialmente oculto */
+    flex-direction: column;
     align-items: center;
+  }
+
+  .navbar.active {
+    display: flex; /* Mostra o menu quando a classe 'active' está presente */
   }
   .navbar a {
     display: block;
