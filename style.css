@@ -431,7 +431,10 @@ section {
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
-    display: none;
+
+    display: flex; /* Habilita o flexbox */
+    flex-direction: column; /* Define o layout vertical */
+    align-items: center;
   }
   .navbar a {
     display: block;
@@ -459,6 +462,9 @@ section {
     padding: 1rem 1.5rem; /* Ajuste o padding conforme necessário */
     gap: 0.5rem; /* Espaçamento entre a bandeira e o texto */
     font-size: 1.6rem; /* Define um tamanho de fonte base para o botão */
+  }
+  .contact-btn {
+    display: none;
   }
 
   .flag-icon img {
