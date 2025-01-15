@@ -1,6 +1,7 @@
 const translations = {
   en: {
-    "translate-button": "Traduzir(pt-br)",
+    "translate-button": "Pt-🇧🇷", //Removido, agora é dinâmico
+    "lang-code": "Pt-🇧🇷", // Nova chave para o código da linguagem
     "logo-text": "Raphael's<span> Portfolio</span>",
     "nav-home": "Home",
     "nav-about": "About",
@@ -43,7 +44,8 @@ const translations = {
     "email-copied-text": "Email Copied!",
   },
   pt: {
-    "translate-button": "Translate(en-us)",
+    "translate-button": "🇺🇸 en-us", //Removido, agora é dinâmico
+    "lang-code": "En-🇺🇸", // Nova chave para o código da linguagem
     "logo-text": "Raphael's<span> Portfólio</span>",
     "nav-home": "Tela Inicial",
     "nav-about": "Sobre",
@@ -86,29 +88,59 @@ const translations = {
     "email-copied-text": "Email Copiado!",
   },
 };
+const flagImages = {
+  en: "brazil.svg",
+  pt: "united-states.svg",
+};
 
-document.getElementById("translate-btn").addEventListener("click", () => {
-  const elements = document.querySelectorAll("[data-translate-key]");
-  const currentLang = document.documentElement.lang;
-  const newLang = currentLang === "en" ? "pt" : "en";
-
-  elements.forEach((element) => {
+function translatePage(lang) {
+  const elementsToTranslate = document.querySelectorAll("[data-translate-key]");
+  elementsToTranslate.forEach((element) => {
     const key = element.getAttribute("data-translate-key");
-    if (translations[newLang] && translations[newLang][key]) {
+    if (translations[lang] && translations[lang][key]) {
       if (element.placeholder !== undefined) {
-        element.placeholder = translations[newLang][key];
+        element.placeholder = translations[lang][key];
       } else if (element.tagName === "INPUT" && element.type === "submit") {
-        element.value = translations[newLang][key];
+        element.value = translations[lang][key];
       } else if (element.id === "email-copied-tooltip") {
-        element.textContent = translations[newLang][key];
+        element.textContent = translations[lang][key];
       } else {
-        element.innerHTML = translations[newLang][key];
+        element.innerHTML = translations[lang][key];
       }
     }
   });
+}
 
-  document.documentElement.lang = newLang;
-  localStorage.setItem("lang", newLang);
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("translate-btn");
+  const langCode = document.querySelector(".lang-text");
+  const flagImage = document.getElementById("flag-image");
+
+  let currentLang = localStorage.getItem("lang") || "en";
+  document.documentElement.lang = currentLang;
+  translatePage(currentLang);
+
+  langCode.textContent = translations[currentLang]["translate-button"];
+  flagImage.src = flagImages[currentLang];
+  flagImage.alt = `Bandeira ${
+    currentLang === "pt" ? "do Brasil" : "dos Estados Unidos"
+  }`;
+  btn.dataset.lang = currentLang;
+
+  btn.addEventListener("click", () => {
+    const currentLang = btn.dataset.lang;
+    const newLang = currentLang === "pt" ? "en" : "pt";
+
+    btn.dataset.lang = newLang;
+    langCode.textContent = translations[newLang]["translate-button"];
+    flagImage.src = flagImages[newLang];
+    flagImage.alt = `Bandeira ${
+      newLang === "pt" ? "do Brasil" : "dos Estados Unidos"
+    }`;
+    document.documentElement.lang = newLang;
+    localStorage.setItem("lang", newLang);
+    translatePage(newLang);
+  });
 });
 
 document.documentElement.lang = "en";

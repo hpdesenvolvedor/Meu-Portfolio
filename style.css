@@ -85,9 +85,25 @@ span {
   text-wrap: nowrap;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
 }
 .gradient-btn:hover {
   transform: scale(1.05);
+}
+.flag-icon img {
+  display: block;
+  vertical-align: middle;
+  width: 25px; /* Largura */
+  height: 18px;
+}
+
+.lang-text {
+  color: var(--text-color);
 }
 
 section {
@@ -398,6 +414,11 @@ section {
 @media (max-width: 1285px) {
   #menu-icon {
     display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 36px;
+    z-index: 1001;
   }
 
   .navbar {
@@ -422,11 +443,32 @@ section {
     display: block;
   }
   .bx-x::before {
-    content: "\f00d"; /*codigo do x do boxicons*/
+    content: "\f00d";
+  }
+  .btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+    align-items: center;
+    margin-right: 5%;
   }
   .gradient-btn {
-    display: none;
+    display: inline-flex; /* Alinha os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 1rem 1.5rem; /* Ajuste o padding conforme necessário */
+    gap: 0.5rem; /* Espaçamento entre a bandeira e o texto */
+    font-size: 1.6rem; /* Define um tamanho de fonte base para o botão */
   }
+
+  .flag-icon img {
+    vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+    display: block; /* Evita espaços extras abaixo da imagem */
+  }
+  .lang-text {
+    color: var(--text-color);
+  }
+
   .home {
     flex-direction: column-reverse;
     margin: 5rem 0;
