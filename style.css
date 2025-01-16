@@ -428,8 +428,17 @@ section {
     right: 36px;
     z-index: 1001;
   }
-  .header {
-    justify-content: space-between; /* Espaçamento automático (ou use gap: 2rem; para espaçamento fixo) */
+  .logo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-right: 20px;
+  }
+
+  .logo:hover {
+    transform: scale(1);
   }
 
   .navbar {
@@ -442,18 +451,18 @@ section {
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
-    display: none; /* Inicialmente oculto */
+    display: none;
     flex-direction: column;
     align-items: center;
   }
 
   .navbar.active {
-    display: flex; /* Mostra o menu quando a classe 'active' está presente */
+    display: flex;
   }
   .navbar a {
     display: block;
     font-size: 2rem;
-    margin: 0; /* Remove margem vertical individual */
+    margin: 0;
     color: var(--text-color);
     width: 100%;
     text-align: center;
