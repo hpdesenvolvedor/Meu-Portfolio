@@ -420,6 +420,19 @@ section {
 }
 
 @media (max-width: 1285px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: -10px;
+    padding: 4rem 10%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
   #menu-icon {
     display: block;
     position: absolute;
@@ -434,11 +447,10 @@ section {
     color: var(--text-color);
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    margin-right: 20px;
   }
 
   .logo:hover {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 
   .navbar {
