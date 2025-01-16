@@ -428,6 +428,9 @@ section {
     right: 36px;
     z-index: 1001;
   }
+  .header {
+    justify-content: space-between; /* Espaçamento automático (ou use gap: 2rem; para espaçamento fixo) */
+  }
 
   .navbar {
     position: absolute;
@@ -450,8 +453,16 @@ section {
   .navbar a {
     display: block;
     font-size: 2rem;
-    margin: 3rem 0;
+    margin: 0; /* Remove margem vertical individual */
     color: var(--text-color);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--main-color);
+  }
+  .navbar a:last-child {
+    border-bottom: none;
   }
   .navbar.active {
     display: block;
@@ -508,5 +519,22 @@ section {
   }
   .about img {
     width: 32vw;
+  }
+  .services-container {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    padding: 1rem; /* Ajusta o padding do container */
+  }
+  .service-info {
+    padding: 2rem; /* Reduz o padding interno dos cards */
+  }
+  .service-info h4 {
+    font-size: 2.5rem; /* Reduz o tamanho da fonte do título */
+  }
+  .service-info p {
+    font-size: 1.2rem; /* Reduz o tamanho da fonte do parágrafo */
+  }
+
+  .service-box {
+    height: auto;
   }
 }
