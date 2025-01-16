@@ -425,7 +425,7 @@ section {
     width: 100%;
     top: 0px;
     left: -10px;
-    padding: 4rem 10%;
+    padding: 3rem 10%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
@@ -504,8 +504,14 @@ section {
     align-items: center; /* Centraliza verticalmente */
     padding: 1rem 1.5rem; /* Ajuste o padding conforme necessário */
     gap: 0.5rem; /* Espaçamento entre a bandeira e o texto */
-    font-size: 1.6rem; /* Define um tamanho de fonte base para o botão */
+    font-size: 1.6rem; /* Define um tamanho de fonte base para o botão */ /* Ajusta o padding para centralizar a imagem */
+    justify-content: center;
   }
+  .gradient-btn .lang-text {
+    /* Seleciona o elemento com a classe lang-text DENTRO do botão */
+    display: none;
+  }
+
   .contact-btn {
     display: none;
   }
