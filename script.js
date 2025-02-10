@@ -2,33 +2,27 @@ const translations = {
   en: {
     "translate-button": "PT - BR", //Removido, agora é dinâmico
     "lang-code": "PT - BR", // Nova chave para o código da linguagem
-    "logo-text": "Raphael's<span> Portfolio</span>",
+    "logo-text": "Henrique's<span> Portifolio</span>",
     "nav-home": "Home",
     "nav-about": "About",
     "nav-services": "Services",
     "nav-contact": "Contact",
     "contact-me": "Contact Me",
-    "home-title": "Hi, It's <span>Raphael</span>",
+    "home-title": "Hi, It's <span>Henrique</span>",
     "home-subtitle": "I'm a <span>Web Developer</span>",
     "home-description":
-      "Specialized in crafting complete digital experiences, combining skills in UI/UX design and interface prototyping to deliver intuitive and functional solutions. My work ranges from user-centered planning and design to the development of scalable web applications, focusing on high performance and responsiveness. I strive to align creativity, technology, and best development practices to efficiently meet project needs.",
+      "Software Developer, I develop projects with (Java, Spring Boot, Spring Data JPA, Maven), consuming API's for registration, inclusion, modifications and deletions, through JSON requests through (Postman), accessing relational databases with (MySql, Postgree).",
     hire: "Hire",
     contact: "Contact",
     "about-title": "About <span>Me</span>",
     "about-description":
-      "Software development professional with three years of experience at a multinational company with diversified operations in the Oil & Gas and Satellite/Internet sectors, where I worked on challenging projects with a focus on UI/UX design. In the Satellite/Internet sector, I participated in the development of innovative solutions for tracking and monitoring Wi-Fi signals in buses and vans, optimizing connectivity and user experience during transportation. My responsibilities included web application development, creating scalable and responsive interfaces, using technologies such as GitLab for version control, TypeScript for static typing, React and Next.js for the frontend, Node.js and Prisma for the backend, Figma for interface design, TailwindCSS for styling, and Django for web development. One of my main projects was the implementation and updating of the company's Marketplace to a new design standard, which involved refactoring existing components, optimizing the code for better performance, and creating and editing plugins to add new features and keep the website constantly evolving. I possess solid skills in scalable web application development, REST APIs, Agile (Scrum) methodologies, and UI/UX design. Furthermore, I have experience using English daily while working with global teams, which allowed me to collaborate effectively on international projects.",
+      "I'm studying my last semester in Software Engineering (06/2025), majoring in Systems Analysis and Development. Interning at Vivo's Data Core Engineering, where I am responsible for Ram Sharing connectivity tests (MME, SGW), Diagnostics trace, sending reports to Deloitte, opening OS through the ABR Telecom system, Sigitm, updating IP Address Pool spreadsheets through the Huawei system, releasing Physical ATP accesses, as required by the POP, among others. Skills/Technologies: Java | SpringBoot | Spring Data JPA | MySQL | Rest API | Git | GitHub | JavaScript | CSS | HTML",
     "read-less-btn": "Read Less",
     "read-more-btn": "Read More",
-    "services-title": "Services",
-    "ui-ux-design": "UI / Ux <br>Design",
-    "ui-ux-description":
-      "I transform ideas into complete digital experiences, creating interfaces that combine functionality and aesthetics. My work involves designing and testing components focused on user experience, ensuring responsive, intuitive, and accessible design. I have the skills to create everything from simple pages to more complex structures, always prioritizing efficient navigation and an attractive visual layout.",
-    "frontend-development": "Frontend Development",
-    "frontend-description":
-      "Specialist in developing modern and scalable interfaces, I offer solutions to enhance websites and systems by fixing bugs, implementing new features, and optimizing performance. I create custom components and complete applications, ensuring a balance between clean design and high functionality, as well as seamless integration with APIs.",
+    "services-title": "Services",    
     "backend-development": "Backend Development",
     "backend-description":
-      "With experience in languages such as Java and C, I work on bug fixing and integrating the backend with the frontend, ensuring efficient communication between system components. I focus on maintaining stable, optimized applications ready to handle the demands of robust and dynamic projects.",
+      "Experience in the Java language and Spring Boot framework, I interact with APIs, solving problems, bringing solutions to the business in an objective and safe way. I have carried out personal API consumption projects including products, and registering people with logins and passwords, ensuring efficient communication between parts of the system. Focus on maintaining stable, optimized applications and ready to deal with the demands of robust and dynamic projects.",
     "footer-faq": "FAQ",
     "footer-services": "Services",
     "footer-about-me": "About Me",
@@ -52,32 +46,26 @@ const translations = {
     "nav-services": "Serviços",
     "nav-contact": "Contato",
     "contact-me": "Contate-me",
-    "home-title": "Olá, me chamo <span>Raphael</span>",
-    "home-subtitle": "Sou um <span>Desenvolvedor Web</span>",
+    "home-title": "Olá, me chamo <span>Henrique</span>",
+    "home-subtitle": "Sou <span>Desenvolvedor Backend</span>",
     "home-description":
-      "Especializado em criar experiências digitais completas, combinando habilidades em design UI/UX e prototipagem de interfaces para oferecer soluções intuitivas e funcionais. Meu trabalho varia desde o planejamento e design centrados no usuário até o desenvolvimento de aplicações web escaláveis, focando em alta performance e responsividade. Esforço-me para alinhar criatividade, tecnologia e as melhores práticas de desenvolvimento para atender eficientemente às necessidades dos projetos.",
-    hire: "Contratar",
+      "Desenvolvedor de Software, Desenvolvo projetos com (Java, Spring Boot, Spring Data JPA, Maven), consumindo API's para cadastramentos, inclusão, modificações e exclusão, através de requisições JSON pelo (Postman), acessando banco de dados relacionais com (MySql, Postgree)."
+    ,hire: "Contratar",
     contact: "Contato",
     "about-title": "Sobre <span>Mim</span>",
     "about-description":
-      "Profissional com três anos de experiência em desenvolvimento de software em uma multinacional com atuação diversificada nos setores de Óleo e Gás e Satélites/Internet, onde trabalhei em projetos desafiadores com foco em design UI/UX. No setor de Satélites/Internet, participei do desenvolvimento de soluções inovadoras para tracking e monitoramento de sinais Wi-Fi em ônibus e vans de viagem, otimizando a conectividade e a experiência do usuário durante o transporte. Minhas responsabilidades incluíam o desenvolvimento de aplicações web, a criação de interfaces escaláveis e responsivas, utilizando tecnologias como GitLab para controle de versão, TypeScript para tipagem estática, React e Next.js para o frontend, Node.js e Prisma para o backend, Figma para design de interfaces, TailwindCSS para estilização e Django para desenvolvimento web. Um dos meus principais projetos foi a implementação e atualização do Marketplace da empresa para um novo padrão de design, o que envolveu a refatoração de componentes existentes, a otimização do código para melhor performance e a criação e edição de plugins para adicionar novas funcionalidades e manter o site em constante evolução. Possuo habilidades sólidas em desenvolvimento de aplicações web escaláveis, APIs REST, metodologias ágeis (Scrum) e design UI/UX.",
+      "Estou cursando último semestre em Engenharia de Software (06/2025), formado em Análise e Desenvolvimento de Sistemas. Estagiando na Engenharia de Core de Dados da Vivo, onde fico responsável pelos testes de conectividades Ram Sharing (MME, SGW), Trace de diagnósticos, envio de relatórios para Deloitte, abertura de OS através do sistema ABR Telecom, Sigitm, atualização de planilhas Pool IP de Endereçamento pelo sistema Huawei, liberações de acessos ATP Físico, conforme necessidade do POP, entre outros. Habilidades/ Tecnologias: Java | Spring Boot | Spring Data JPA | MySQL | API Rest | Git | GitHub | Javascript | CSS | HTML",
     "read-less-btn": "Leia Menos",
     "read-more-btn": "Leia Mais",
     "services-title": "Serviços",
-    "ui-ux-design": "UI / Ux <br>Design",
-    "ui-ux-description":
-      "Transformo ideias em experiências digitais completas, criando interfaces que aliam funcionalidade e estética. Meu trabalho envolve projetar e testar componentes focados na experiência do usuário, garantindo design responsivo, intuitivo e acessível. Tenho habilidades para criar desde páginas simples até estruturas mais complexas, sempre priorizando uma navegação eficiente e visual atrativo.",
-    "frontend-development": "Desenvolvimento Frontend",
-    "frontend-description":
-      "Especialista em desenvolvimento de interfaces modernas e escaláveis, ofereço soluções para aprimorar sites e sistemas, corrigindo erros, implementando novas funcionalidades e otimizando a performance. Crio componentes personalizados e aplicações completas, garantindo um equilíbrio entre design limpo e alta funcionalidade, além de integração fluida com APIs.",
     "backend-development": "Desenvolvimento Backend",
     "backend-description":
-      "Com experiência em linguagens como Java e C, atuo na correção de bugs e na integração do backend com o frontend, assegurando a comunicação eficiente entre as partes do sistema. Foco em manter aplicações estáveis, otimizadas e prontas para lidar com as demandas de projetos robustos e dinâmicos.",
+      "Experiência na linguagem Java e framework Spring Boot, faço interação de API's solucionando problemas, trazendo soluções para o negócio de forma objetiva e segura. Tenho feitos projetos pessoais de consumo de API's com inclusão de produtos, e cadastro de pessoas com login e senhas, assegurando a comunicação eficiente entre as partes do sistema. Foco em manter aplicações estáveis, otimizadas e prontas para lidar com as demandas de projetos robustos e dinâmicos.",
     "footer-faq": "Perguntas Frequentes",
     "footer-services": "Serviços",
     "footer-about-me": "Sobre Mim",
     "footer-contact": "Contato",
-    "footer-copyright": "© Raphael Moreira | Todos os Direitos Reservados",
+    "footer-copyright": "© Henrique Nunes | Todos os Direitos Reservados",
     "contact-heading": "Contate <span>Me</span>",
     "send-message-btn": "Enviar Mensagem",
     "full-name": "Nome Completo",
