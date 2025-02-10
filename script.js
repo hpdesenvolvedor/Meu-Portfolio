@@ -27,7 +27,7 @@ const translations = {
     "footer-services": "Services",
     "footer-about-me": "About Me",
     "footer-contact": "Contact",
-    "footer-copyright": "© Raphael Moreira | All Rights Reserved",
+    "footer-copyright": "© Henrique Nunes | All Rights Reserved",
     "contact-heading": "Contact <span>Me</span>",
     "send-message-btn": "Send Message",
     "full-name": "Full Name",
@@ -40,7 +40,7 @@ const translations = {
   pt: {
     "translate-button": "EN - US",
     "lang-code": "EN - US",
-    "logo-text": "Raphael's<span> Portfólio</span>",
+    "logo-text": "Henrique's<span> Portfólio</span>",
     "nav-home": "Tela Inicial",
     "nav-about": "Sobre",
     "nav-services": "Serviços",
