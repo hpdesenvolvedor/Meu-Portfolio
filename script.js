@@ -1,7 +1,7 @@
 const translations = {
   en: {
-    "translate-button": "PT - BR", //Removido, agora é dinâmico
-    "lang-code": "PT - BR", // Nova chave para o código da linguagem
+    "translate-button": "PT - BR", 
+    "lang-code": "PT - BR", 
     "logo-text": "Henrique's<span> Portifolio</span>",
     "nav-home": "Home",
     "nav-about": "About",
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailCopiedTooltips = document.querySelectorAll(
     ".email-copied-tooltip"
   );
-  const emailToCopy = "raphael.moreira@soulasalle.com.br";
+  const emailToCopy = "nuneshp2@gmail.com";
 
   copyEmailButtons.forEach((button, index) => {
     button.addEventListener("click", function (event) {
